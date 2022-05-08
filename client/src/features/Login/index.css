@@ -1,0 +1,47 @@
+.hidden {
+  display: none;
+}
+
+.lContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 360px;
+  margin: 0px auto;
+}
+
+.lItem {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.loginForm {
+  background-color: white;
+  padding-left: 30px;
+  padding-top: 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #d8d8da;
+}
+
+.loginImage {
+  width: 360px;
+  text-align: center;
+}
+
+.loginImage img {
+  width: 300px;
+}
+
+.login-form {
+  width: 300px;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+.login-form-forgot {
+  float: right;
+}

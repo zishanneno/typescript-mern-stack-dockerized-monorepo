@@ -1,0 +1,20 @@
+{
+  "login": {
+    "title": "Login",
+    "rememberMe": "Remember me",
+    "passwordReset": "Forgot password?",
+    "buttonLabel": "Login",
+    "username": {
+      "placeholder": "Username",
+      "validationMessage": "Please enter your username"
+    },
+    "password": {
+      "placeholder": "Password",
+      "validationMessage": "Please enter your password"
+    },
+    "message": {
+      "success": "Logged in successfully.",
+      "failure": "Login failed. Please check your credentials."
+    }
+  }
+}

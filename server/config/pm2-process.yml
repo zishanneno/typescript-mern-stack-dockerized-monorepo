@@ -1,0 +1,5 @@
+apps:
+  - name: server
+    script: /server/dist/server.js
+    exec_mode: cluster
+    instances: max

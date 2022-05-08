@@ -1,0 +1,18 @@
+{
+  "menu": {
+    "home": "Home",
+    "menuGroup": "Menu Group",
+    "item1": "Item 1",
+    "item2": "Item 2",
+    "item3": "Item 3"
+  },
+  "topMenu": {
+    "signout": "Sign out"
+  },
+  "404": {
+    "title": "Not found",
+    "message": "Sorry, the page you visited does not exist.",
+    "buttonLabel": "Back to home page"
+  },
+  "loading": "Loading..."
+}

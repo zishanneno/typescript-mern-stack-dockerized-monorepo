@@ -1,0 +1,39 @@
+{
+  "name": "typescript-mern-stack-dockerized-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "client",
+    "server"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zishanneno/typescript-mern-stack-dockerized-monorepo.git"
+  },
+  "author": "Zishan Neno",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "start": "concurrently \"yarn start:client\" \"yarn start:server\"",
+    "start:client": "yarn workspace client start",
+    "start:server": "yarn workspace server start",
+    "clean": "yarn clean:client && yarn clean:server",
+    "clean:client": "yarn workspace client clean",
+    "clean:server": "yarn workspace server clean",
+    "build": "concurrently \"yarn build:client\" \"yarn build:server\"",
+    "build:client": "yarn workspace client build",
+    "build:server": "yarn workspace server build",
+    "build:devDb": "docker-compose up --build -d database",
+    "build:docker": "yarn build && docker-compose up --build --force-recreate -d",
+    "clean:docker:containers": "docker-compose down --volume",
+    "clean:docker:images": "docker rmi $(docker images \"$(grep 'COMPOSE_PROJECT_NAME' .env | sed 's/COMPOSE_PROJECT_NAME=//g')*/*\" -q)",
+    "clean:docker": "yarn clean:docker:containers && yarn clean:docker:images",
+    "clean:all": "yarn clean && yarn clean:docker"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  }
+}
